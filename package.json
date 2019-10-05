@@ -4,7 +4,7 @@
     "build": "next build",
     "start": "next start -p 80"
   },
-  "name": "sandbox-next",
+  "name": "##PROJECT_NAME##",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

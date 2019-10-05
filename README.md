@@ -1,1 +1,1 @@
-# next-ssr-sandbox
+# ##PROJECT_NAME##
