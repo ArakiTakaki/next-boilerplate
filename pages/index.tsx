@@ -18,6 +18,7 @@ const index = (props: IIndexProps) => {
   return (
     <div>
       <h1>{name}</h1>
+      hello samplec
       {JSON.stringify(store)}
     </div>
   );

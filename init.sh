@@ -6,4 +6,4 @@ read PROJECT_NAME
 echo $PROJECT_NAME
 
 sed -i '' "s/##PROJECT_NAME##/${PROJECT_NAME}/g" ./README.md
-sed -i '' "s/##PROJECT_NAME##/${PROJECT_NAME}/g" ./package.json
+sed -i '' "s/PROJECT_NAME/${PROJECT_NAME}/g" ./package.json
