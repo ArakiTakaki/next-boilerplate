@@ -1,14 +1,13 @@
 const withTypescript = require('@zeit/next-typescript')
-
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const withSass = require('@zeit/next-sass')
+const withCSS = require("@zeit/next-css");
 
-module.exports = withSass(withTypescript({
-  cssModules: true,
+let app = withTypescript({
   webpack(config, options) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '~': './src',
+      '~': './',
       'style': './assets/style'
     }
     // typetyeckする
@@ -18,4 +17,14 @@ module.exports = withSass(withTypescript({
 
     return config;
   }
-}));
+})
+app = withCSS({
+  cssModules: true,
+  ...app,
+});
+app = withSass({
+  cssModules: true,
+  ...app
+})
+
+module.exports = app;
